@@ -1,0 +1,98 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .box {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  }
+  
+  .box:hover {
+    background-color: lightcoral;
+    transform: scale(1.1);
+  }
+  
+  .text {
+    padding: 10px;
+  }
+  
+  .box:active {
+    background-color: darkblue;
+  }
+  
+  .box:focus {
+    outline: none;
+  }
+  
+  @keyframes move {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes color-change {
+    0% {
+      background-color: lightblue;
+    }
+    50% {
+      background-color: lightcoral;
+    }
+    100% {
+      background-color: lightblue;
+    }
+  }
+  
+  .box.animated {
+    animation: move 2s linear infinite, color-change 5s linear infinite alternate;
+  }
+  .lifePa {
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .lifePa.show {
+    opacity: 1;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-20px);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+    
